@@ -1,0 +1,4 @@
+class Solution(object):
+
+    def addBinary(self, a, b):
+        return str(bin(int(a, base=2) + int(b, base=2)))[2:]

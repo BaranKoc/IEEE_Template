@@ -1,0 +1,29 @@
+class Skiplist {
+public:
+    map<int,int>s;
+    Skiplist() {
+
+    }
+
+    bool search(int target) {
+        if(s.find(target)!=s.end())
+            return true;
+        else
+            return false;
+    }
+
+    void add(int num) {
+        s[num]++;
+    }
+
+    bool erase(int num) {
+        if(s.find(num)==s.end())
+            return false;
+        else{
+            s[num]--;
+            if(s[num]==0)
+                s.erase(num);
+            return true;
+        }
+    }
+};
